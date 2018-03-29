@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MoviesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MoviesModelStoreContainer">
+    <EntitySet Name="Screens" EntityType="MoviesModel.Store.Screens" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Theaters" EntityType="MoviesModel.Store.Theaters" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Screens__Theater__286302EC" Association="MoviesModel.Store.FK__Screens__Theater__286302EC">
+      <End Role="Theaters" EntitySet="Theaters" />
+      <End Role="Screens" EntitySet="Screens" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Screens">
+    <Key>
+      <PropertyRef Name="Screen_id" />
+    </Key>
+    <Property Name="Theater_id" Type="varchar" Nullable="true" MaxLength="6" />
+    <Property Name="Screen_id" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="No_of_Seats" Type="decimal" Nullable="true" Precision="3" Scale="0" />
+    <Property Name="Current_Movie" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ThreeD" Type="varchar" Nullable="true" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="Theaters">
+    <Key>
+      <PropertyRef Name="Theater_id" />
+    </Key>
+    <Property Name="Theater_id" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="TheaterName" Type="varchar" Nullable="true" MaxLength="30" />
+    <Property Name="Address" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="PhoneNumber" Type="varchar" Nullable="true" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__Screens__Theater__286302EC">
+    <End Role="Theaters" Type="MoviesModel.Store.Theaters" Multiplicity="0..1" />
+    <End Role="Screens" Type="MoviesModel.Store.Screens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Theaters">
+        <PropertyRef Name="Theater_id" />
+      </Principal>
+      <Dependent Role="Screens">
+        <PropertyRef Name="Theater_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MoviesEntities-Web.config Connection String" description="MoviesEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.TheaterModel.csdl|res://*/Models.TheaterModel.ssdl|res://*/Models.TheaterModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Server=tcp:assignment2dbserver.database.windows.net,1433;Initial Catalog=assignment2db;Persist Security Info=False;User ID=harleen;Password=@assignment2018;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Client\ Documents\\Harre\ Singh\\28\ march\ 2018\ Harre\ Assignment\ 2\ –\ Enterprise\ Computing\\Assignment2\\Assignment2\\Assignment2\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MoviesEntities']/@connectionString" />
+  </parameter>
+</parameters>

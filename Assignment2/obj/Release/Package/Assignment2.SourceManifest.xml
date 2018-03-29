@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="E:\Client Documents\Harre Singh\28 march 2018 Harre Assignment 2 – Enterprise Computing\Assignment2\Assignment2\Assignment2\obj\Release\Package\PackageTmp" />
+  <setAcl path="E:\Client Documents\Harre Singh\28 march 2018 Harre Assignment 2 – Enterprise Computing\Assignment2\Assignment2\Assignment2\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="E:\Client Documents\Harre Singh\28 march 2018 Harre Assignment 2 – Enterprise Computing\Assignment2\Assignment2\Assignment2\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
